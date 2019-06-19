@@ -15,8 +15,22 @@ public class CalculatorController implements Initializable {
 	  
 	   @FXML
 	   private TextField firstNumberTextField,secondNumberTextField, resultTextField;
-	  
+	   @FXML
+	   private void handleAdditionAction(ActionEvent event) {
+		   double first = Double.parseDouble(firstNumberTextField.getText());
+		   double second = Double.parseDouble(secondNumberTextField.getText());
+		   double result = first + second;
+		   resultTextField.setText(String.valueOf(result));
+	   }
 	
+	   @FXML
+	   private void handleMultiplicationAction(ActionEvent event) {
+		   double first = Double.parseDouble(firstNumberTextField.getText());
+		   double second = Double.parseDouble(secondNumberTextField.getText());
+		   double result = first * second;
+		   resultTextField.setText(String.valueOf(result));
+	   }
+	   
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
