@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class LoginPageController implements Initializable {
@@ -15,22 +16,15 @@ public class LoginPageController implements Initializable {
 
 	@FXML
 	private TextField firstNumberTextField, secondNumberTextField, resultTextField;
-
 	@FXML
-	private void handleAdditionAction(ActionEvent event) {
-		double first = Double.parseDouble(firstNumberTextField.getText());
-		double second = Double.parseDouble(secondNumberTextField.getText());
-		double result = first + second;
-		resultTextField.setText(String.valueOf(result));
+	private Label label;
+	@FXML
+	private void handleLoginAction(ActionEvent event) {
+		label.setText("Logged in");
+		System.out.println("logging in ...");
 	}
 
-	@FXML
-	private void handleMultiplicationAction(ActionEvent event) {
-		double first = Double.parseDouble(firstNumberTextField.getText());
-		double second = Double.parseDouble(secondNumberTextField.getText());
-		double result = first * second;
-		resultTextField.setText(String.valueOf(result));
-	}
+	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
